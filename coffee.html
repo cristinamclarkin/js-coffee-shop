@@ -55,16 +55,17 @@
 
 
 function makeCoffee(evt) {
-    myImage.setAttribute('src', 'static/coffee_mug.jpg')
-    //myImage.setAttribute('src', 'static/coffee_machine.jpg'); 
+    myImage.setAttribute('src', 'static/coffee_machine.jpg');
+    setTimeout(function() {myImage.setAttribute('src', 'static/coffee_mug.jpg');}, 500)
+    setTimeout(function() {myImage.setAttribute('src', 'static/coffee_beans.jpg');}, 1500)
 
     console.dir(evt);
 }
 
 
 setTimeout(function () {
-    myImage.addEventListener('click', makeCoffee);
-}, 500);
+     myImage.addEventListener('click', makeCoffee);
+    }, 500);
 
 
 
